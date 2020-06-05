@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Практикум 2 </title>
+    <link href="static/semperes.css" rel="stylesheet">
+    <link href="static/prweb.css" rel="stylesheet">
+  </head>
+ <body>
+    <h1> Практикум 2. A-, B- и Z-формы ДНК. </h1>
+
+    <ul>
+            <li> <a href="index.html"> Main page </a> </li>
+            <li> <a href="about_me.html"> About me </a> </li>
+            <li> <a href="term1.html"> First semester </a> </li>
+            <li> <a href="term2.html"> Second semester </a> </li>
+            <li> <a href="gallery.html"> Gallery </a> </li>
+            <li> <A href="http://fbb.msu.ru">FBB </A> </li>
+    </ul>
+        <h2> Задание 1 </h2>
+      <p>  С помощью программы fiber пакета 3DNA я построила A-, B- и Z-форму дуплекса ДНК  <br/>      
+        <a href="static/gatc-a.pdb" downlaod> A-форма </a> <br/>
+        <a href="static/gatc-b.pdb" download> B-форма </a> <br/>
+        <a href="static/gatc-z.pdb" download> Z-форма </a> </p>
+		<h2> Задание 2 </h2>
+		<p>С помощью программы JMol я визуально определила большую и малую бороздки и 
+		такие харктеристики, как тип спирали, шаг спирали, число оснований на виток, 
+		ширина большой и малой бороздок у A-, B, и Z- форм ДНК. Результаты приведены в 
+		таблице. Также я рассмотрела гуанин, с помощью Marvin Sketch выделила красным 
+		цветом атомы, смотрящие в сторону большой бороздки, синим - в сторону малой.</p>
+		<p>В сторону большой бороздки обращены атомы: O6, C6, C5, N7, C8.</p>
+		<p>В сторону малой бороздки обращены атомы:  C2, N2, N3, C4, N9.</p>		
+		<p><img src="static/img/pr2p1.jpg" width=300 alt="Oops"></p>
+		<table>
+    <tr>
+        <td></td>
+        <td>a-форма</td>
+        <td>b-форма</td>
+        <td>z-форма</td>
+    </tr>
+    <tr>
+        <td>тип спирали</td>
+        <td>правая</td>
+        <td>правая</td>
+        <td>левая</td>
+    </tr>
+    <tr>
+        <td>шаг спирали<br></td>
+        <td>28.03</td>
+        <td>33.75</td>
+        <td>43.5</td>
+    </tr>
+    <tr>
+        <td>число оснований на виток</td>
+        <td>11</td>
+        <td>10</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>ширина большой бороздки</td>
+        <td>17.11 (30:b фосфат)</td>
+        <td>20.58 (29:b фосфат)</td>
+        <td>11.58 (26:b фосфат)</td>
+    </tr>
+    <tr>
+        <td>ширина малой борозки</td>
+        <td>7.98 (27:b фотсфат)</td>
+        <td>13.2 (6:a фосфат)</td>
+        <td>7.2 (17:a фосфат)</td>
+    </tr>
+</table>
+		<h2> Задание 3 </h2>
+		<p> Для данного задания была взята выданная тРНК с PDB ID 1ML5 (хотя именно о 
+		тРНК корректнее сказать 1ML5_B). Далее с помощью команды 
+		<i> find_pair -t 1ml5_old.pdb stdout | analyze </i> были получены файлы с различной
+		информацией, в том числе файл 1ml5_old.out, в котором содержится информация о 
+		торсионнных углах. </p>
+		<p> В таблице ниже я привела значения торсионных углов у заданной тРНК, а также
+		у A-, B- и Z- форм ДНК. Можно сказать, что структура тРНК получилась больше всего 
+		похожа на A-форму ДНК.</p>
+		<table>
+    <tr>
+        <td></td>
+        <td>alpha</td>
+        <td>beta</td>
+        <td>gamma</td>
+        <td>delta</td>
+        <td>epsilon</td>
+        <td>zeta</td>
+        <td>chi</td>
+    </tr>
+    <tr>
+        <td>1ml5_b</td>
+        <td>-44.32</td>
+        <td>80.13</td>
+        <td>45.02</td>
+        <td>89.37</td>
+        <td>-135.6</td>
+        <td>-66.96</td>
+        <td>-147.77</td>
+    </tr>
+    <tr>
+        <td>a-dna</td>
+        <td>-51.7</td>
+        <td>174.8</td>
+        <td>41.7</td>
+        <td>79.08</td>
+        <td>-147.79</td>
+        <td>-75.09</td>
+        <td>-157.2</td>
+    </tr>
+    <tr>
+        <td>b-dna</td>
+        <td>-29.9</td>
+        <td>136.34</td>
+        <td>31.14</td>
+        <td>143.34</td>
+        <td>-140.8</td>
+        <td>-160.5</td>
+        <td>-97.99</td>
+    </tr>
+    <tr>
+        <td>z-dna</td>
+        <td>-48.8</td>
+        <td>21.12</td>
+        <td>-61.47</td>
+        <td>116.25</td>
+        <td>-100.05</td>
+        <td>4.72</td>
+        <td>-47.8</td>
+    </tr>
+</table>
+		<p> В том же файле можно найти информацию о водородных связях. </p>
+		<p><img src="static/img/pr2p2.jpg" width=600 alt="Oops"></p>
+		<p> Координаты стеблей: 2-7..71-66, 49-53..65-61, 38-44..32-36, 10-13..25-22 <br/>
+		Неканонические пары: G-U, A-c, P-a, A-g <br/>
+		Связи, стабилизирующие третичную структуру: t-a, P-G, A-U, G-C, g-U </p>
+<footer>
+&#169; Ekaterina Astanina 2020
+</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Алгоритмы выравнивания </title>
+    <link href="static/semperes.css" rel="stylesheet">
+    <link href="static/prweb.css" rel="stylesheet">
+</head>
+<body>
+<h1> Алгоритмы выравнивания </h1>
+    <ul>
+            <li> <a href="index.html"> Main page </a> </li>
+            <li> <a href="about_me.html"> About me </a> </li>
+            <li> <a href=".term1"> First semester </a> </li>
+            <li> <a href="term2"> Second semester </a> </li>
+            <li> <a href="gallery.html"> Gallery </a> </li>
+            <li> <A href="http://fbb.msu.ru">FBB </A> </li>
+    </ul>
+    
+<h1> Сравнение выравнивания гомологичных белков и негомологичных белков </h1>
+<p> Из базы данных SwissProt сначала было выбрано по 5 гомологичных белков из протеома 
+штамма K12 кишечной палочки и из протеома штамма 168 сенной палочки. Для каждой пары 
+были проведены глобальное и локальное выравнивания. Затем тоже самое было проделано 
+для негомологичных белков тех же организмов. Результаты выравнивания представлены в 
+таблице 1 (Table 1).</p>
+<li> <a href="static/table1.xlsx"> Table 1 </a> </li>
+<p> Судя по полученным данным о гомологичности белков можно говорить, если в 
+глобальном выравнивании процент идентичности(identity) больше 35, а схожести(simularity) 
+больше 50. В локальном выравнивании эти значения ожидаемо выше, поскольку оно использует 
+части последовательностей, на которых прогнозируется максимальная гомология. </p>
+<h1> Сравнение множественного выравнивания и needle </h1>
+<p>1) На участке 30-40 в needle выравнивании присутствуют участки L-L, E-E и P-P 
+за счёт наличия гэпов, отсутствующих во множественном выравнивании.</p>
+<p><img src="static/img/pr11pic1-1.jpg" width=200 alt="Oops"></p>
+<p><img src="static/img/pr11pic1-2.jpg" width=200 alt="Oops"></p>
+<p>2) Во множественном выравнивании на 270 позиции находится P-P участок, 
+отсутствующий в needle.</p>
+<p><img src="static/img/pr11pic2-1.jpg" width=200 alt="Oops"></p>
+<p><img src="static/img/pr11pic2-2.jpg" width=200 alt="Oops"></p>
+<p>3) Во множественном выравнивании на 319 позиции находится G-G участок, 
+отсутствующий в needle.</p>
+<p><img src="static/img/pr11pic3-1.jpg" width=200 alt="Oops"></p>
+<p><img src="static/img/pr11pic3-2.jpg" width=200 alt="Oops"></p>
+<footer>
+&#169;  © Ekaterina Astanina 2020
+</footer>
+</body>
+</html>

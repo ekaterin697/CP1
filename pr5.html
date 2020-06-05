@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> UniProt </title>
+    <link href="static/semperes.css" rel="stylesheet">
+    <link href="static/prweb.css" rel="stylesheet">
+    <style>
+    h5{font-size: 27px}
+    </style>
+  </head>
+ <body>
+    <h1> UniProt </h1>
+    <ul>
+            <li> <a href="index.html"> Main page </a> </li>
+            <li> <a href="about_me.html"> About me </a> </li>
+            <li> <a href="term1.html"> First semester </a> </li>
+            <li> <a href="term2.html"> Second semester </a> </li>
+            <li> <a href="gallery.html"> Gallery </a> </li>
+            <li> <A href="http://fbb.msu.ru">FBB </A> </li>
+ </ul>   
+<main>
+<h2 class="prac_title">
+   Знакомство с банком UniProt. 
+</h2>
+
+<p class="prac_intro">
+    Цель данного практикума: получение навыков работы с банком UniProt (таких как извлечение 
+    необходимых данных).
+    В качестве отчёта: предоставление данных о Бета субъединице ацетофенон карбоксилазы 
+    из генома бактерии Aromatoleum aromaticum EbN1.
+</p>
+
+<section class="basic_task">
+<h3 class="task_title">Поиск белка в банке UniProt.</h3>
+
+<p class="task_intro">
+   С помощью базы UniProt были получены основные данные о белке. Результаты приведены в таблице 1.
+</p>
+
+<table class="task_table">
+    <caption>
+        <span class="table_number">
+            Таблица 1.
+        </span>
+        Основная информация о белке APCB_AROAE из UniProt.
+    </caption>
+    <tbody>
+        <tr>
+            <th class="column_header">UniProt ID</th>
+            <th class="column_header">UniProt AC</th>
+            <th class="column_header">RefSeq ID</th>
+            <th class="column_header">PDB ID</th>
+            <th class="column_header">Длина белка (а.о.)</th>
+            <th class="column_header">Молекулярная масса (Да)</th>
+            <th class="column_header">Рекомендуемое название</th>
+        </tr>
+        <tr>
+            <td>APCB_AROAE</td>
+            <td>Q5P5G3</td>
+            <td>WP_011237169.1</td>
+            <td>5L9W</td>
+            <td>129</td>
+            <td>14993</td>
+            <td>Acetophenone carboxylase beta subunit</td>
+        </tr>
+    </tbody>
+</table>
+
+<p class="task_info">
+</p>
+
+<p class="task_outro">
+    В UniProt представлена основная информация о белке, включая имя организма, которому 
+    принадлежит данный белок, функции, данные о взаимодействиях, структуру с PDB апплетом, 
+    последовательность и т.д.
+</p>
+
+</section>
+
+<section class="basic_task">
+<h3 class="task_title">Поиск белка APCB_AROAE в UniRef</h3>
+
+<p class="task_intro">
+С помощью базы UniProt были найдены кластеры белка UniRef50, UniRef90 и UniRef100.
+</p>
+
+<table class="task_table">
+    <caption>
+        <span class="table_number">
+            Таблица 2.
+        </span>
+        Кластеры UniRef, содержащие белок APCB_AROAE.
+    </caption>
+    <tbody>
+        <tr>
+            <th class="column_header">Раздел UniRef</th>
+            <th class="column_header">ID кластера</th>
+            <th class="column_header">Название кластера</th>
+            <th class="column_header">Размер кластера</th>
+        </tr>
+        <tr>
+            <th class="row_header">UniRef100</th>
+            <td>UniRef100_Q5P5G3</td>
+            <td>Acetophenone carboxylase beta subunit (100%)</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th class="row_header">UniRef90</th>
+            <td>UniRef90_Q5P5G3</td>
+            <td>Acetophenone carboxylase beta subunit (90%)</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th class="row_header">UniRef50</th>
+            <td>UniRef50_Q5P5G3</td>
+            <td>Acetophenone carboxylase beta subunit (50%)</td>
+            <td>6</td>
+        </tr>
+    </tbody>
+</table>
+
+<p class="task_outro">
+    UniRef 100 объединяет идентичные последовательности и субфрагменты с 11 или более 
+    остатками из любого организма в одну запись UniRef.
+    <br/>
+    UniRef 90 создается путем кластеризации последовательностей UniRef100 таким образом, 
+    что каждый кластер состоит из последовательностей, которые имеют по меньшей мере 90% 
+    идентичности последовательностей и 80% перекрываются с самой длинной 
+    последовательностью (например, начальная последовательность).
+    <br/>
+    UniRef50 создается путем кластеризации начальных последовательностей UniRef90, которые 
+    имеют по меньшей мере 50% идентичности и 80% перекрываются с самой длинной 
+    последовательностью в кластере.
+</p>
+
+</section>
+
+<section class="basic_task">
+<h3 class="task_title">Сеансы поиска в UniProt</h3>
+
+<p class="task_intro">
+    Для знакомства с возможностями поиска в UniProt был проведён ряд запросов.
+</p>
+ 
+     <h5>Поиск по рекомендованному названию белка.</h5>
+    <p> Текст запроса: <kbd>«‎name:"acetophenone carboxylase beta subunit"»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 1 <br />
+        Общее количество находок: 9 <br />
+    </p>
+     
+
+     <h5>Поиск по тому же названию среди белков своего организма</h5>
+    <p> Текст запроса: <kbd>«‎name:"acetophenone carboxylase beta subunit" organism:"aromatoleum aromaticum"»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 1 <br />
+        Общее количество находок: 1 <br />
+    </p>
+     
+    
+     <h5>Поиск по тому же названию среди белков из организмов того же семейства</h5>
+    <p>
+        Текст запроса: <kbd>«‎name:"acetophenone carboxylase beta subunit" taxonomy:rhodocyclaceae»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 1 <br />
+        Общее количество находок: 1 <br />
+    </p>
+     
+    
+     <h5>Поиск по тому же названию среди белков из организмов того же отдела </h5>
+    <p>
+        Текст запроса: <kbd>«‎name:"acetophenone carboxylase beta subunit" taxonomy:proteobacteria»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 1 <br />
+        Общее количество находок: 3 <br />
+    </p>
+     
+  
+<h4 class="task_subtitle">Поиск альбуминов</h4>
+ 
+    <h5>Поиск альбуминов без ограничения на организмы</h5>
+    <p>
+        Текст запроса: <kbd>«‎name:albumin»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 77 <br />
+        Общее количество находок: 1043 <br />
+    </p>
+ 
+     <h5>Поиск альбуминов у грибов</h5>
+    <p>
+        Текст запроса: <kbd>«‎name:albumin taxonomy:fungi»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 0 <br />
+        Общее количество находок: 2 <br />
+    </p>
+     
+         <h5>Поиск альбуминов у позвоночных животных</h5>
+    <p>
+        Текст запроса: <kbd>«‎name:albumin taxonomy:vertebrata»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 43 <br />
+        Общее количество находок: 440 <br />
+    </p>
+     
+
+<h4 class="task_subtitle">Поиск трипсинов</h4>
+     <h5>Поиск по слову "трипсин"</h5> 
+    <p>
+        Текст запроса: <kbd>«‎name:trypsin»‎</kbd> <br />
+        Количество находок в Swiss-Prot: 312 <br />
+        Общее количество находок: 23018 <br />
+    </p>
+
+     <h5>Поиск трипсинов, исключая их ингибиторы</h5>
+    <p>
+        Текст запроса: <kbd>«‎name:trypsin NOT inhibitor»‎</kbd> <br/>
+        Количество находок в Swiss-Prot: 95 <br/>
+        Общее количество находок: 18204 <br/>
+    </p>
+     
+
+<p class="task_outro">
+</p>
+
+</section>
+<section class="suppl_task">
+<h3 class="task_title">Поиск различий в записях UniProt и RefSeq Protein</h3>
+
+<p class="task_intro">
+   Были найдены записи о Бета субъединице ацетофенон карбоксилазы в UniProt и RefSeq 
+   Protein, а также проведено их сравнение с целью выявления схожести и отличий.
+</p>
+<p class="task_info">
+    В UniProt последовательность белка записана с отступом через каждые 10 символов, 
+    переносом строки через каждые 50 и нумерацией каждой 10й аминокислоты.<br/>
+    В RefSeq последовательность белка записана с отступом через каждые 10 символов, 
+    переносом строки через каждые 60 и нумерацией каждой (60n+1)ой (где n=0,1,2...) аминоксилоты.
+    <br/>
+    <br/>
+    
+</p>
+</section>
+<section class="suppl_task">
+<h3 class="task_title">История изменений записи UniProt.</h3>
+
+<p class="task_intro">
+    Для выявления измений с течением времени была просмотрена история записей белка.
+</p>
+<p class="task_info">
+    Ключевые моменты:.<br/>
+    - 4 января 2005 года была создана запись в TrEMBL и присвоено имя Q5P5G3.<br/>
+    - 1 февраля 2005 г. имя было изменено на Q5P5G3_AZOSE.<br/>
+    - 11 января 2011 г. имя было изменено на Q5P5G3_AROAE.<br/>
+    - 5 сентября 2012 г. запись была добавлена в Swiss-Prot, а имя изменено на APCB_AROAE.<br/>
+    Всего измененй в записи было 67.<br/>
+</p>
+</section>
+</main>
+<footer>
+&#169;  © Ekaterina Astanina 2020
+</footer>
+</body>
+</html> 

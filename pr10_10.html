@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Практикум 10 </title>
+    <link href="static/prweb.css" rel="stylesheet">
+    <link href="static/semperes.css" rel="stylesheet">
+  </head>
+ <body>
+    <h1> Геномные браузеры </h1>
+
+    <ul>
+            <li> <a href="index.html"> Main page </a> </li>
+            <li> <a href="about_me.html"> About me </a> </li>
+            <li> <a href="term1.html"> First semester </a> </li>
+            <li> <a href="term2.html"> Second semester </a> </li>
+            <li> <a href="gallery.html"> Gallery </a> </li>
+            <li> <A href="http://fbb.msu.ru">FBB </A> </li>
+    </ul>
+    <h2> UCSC </h2>
+<table>
+    <tr>
+        <td>Имя гена</td>
+        <td>ETNK2</td>
+    </tr>
+    <tr>
+        <td>Идентификатор гена в Gencode</td>
+        <td>ENSG00000143845.15</td>
+    </tr>
+    <tr>
+        <td>Цепь</td>
+        <td>Обратная</td>
+    </tr>
+    <tr>
+        <td>Хромосома</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Плечо и полоса</td>
+        <td>q32.1</td>
+    </tr>
+    <tr>
+        <td>Альтернативных продуктов</td>
+        <td>7</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Идентификатор gencode</td>
+        <td>Координаты</td>
+        <td>Число экзонов</td>
+        <td>Длина белка</td>
+    </tr>
+    <tr>
+        <td>ENST00000367201.7<br></td>
+        <td>chr1:204,131,062-204,151,894</td>
+        <td>8</td>
+        <td>394</td>
+    </tr>
+    <tr>
+        <td>ENST00000367202.9</td>
+        <td>chr1:204,131,062-204,152,044</td>
+        <td>8</td>
+        <td>386</td>
+    </tr>
+    <tr>
+        <td>ENST00000367197.5</td>
+        <td>chr1:204,131,956-204,141,262</td>
+        <td>5</td>
+        <td>68</td>
+    </tr>
+</table>
+<p><img src="static/img/pr10p1.png" width=700 alt="Oops"></p>
+	<h2> Ensembl </h2>
+<p> С помощью Ensembl я получила <a href="static/Human_Chimpanzee_lastz.fasta" download> 
+выравнивание </a> гена белка ETNK2 человека и шимпанзе. С помощью команды <i> infoalign 
+‑only ‑diffcount Human_Chimpanzee_lastz.fasta out.txt </i> я получила количество отличий: 
+209. Таким образом процент различий равен (209/21014)*100% = 0.99%, что в целом 
+соответствует данным из интернета. </p>
+<footer>
+&#169;  Ekaterina Astanina 2020
+</footer>
+</body>
+</html>

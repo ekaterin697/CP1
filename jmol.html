@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Jmol </title>
+    <link href="static/semperes.css" rel="stylesheet">
+    <link href="static/prweb.css" rel="stylesheet">
+    <!-- Load JSMol minimal suit from external server -->
+    <link rel="stylesheet" type="text/css" href="chrome-extension://pgjndpcilbcanlnhhjmhjalilcmoicjc/styles.css"><link rel="stylesheet" type="text/css" href="chrome-extension://klmjcelobglnhnbfpmlbgnoeippfhhil/styles.css"></head>
+
+<script type="text/javascript"
+src="https://vsb.fbb.msu.ru/share/jmol/jsmol/JSmol.min.js">
+</script>
+
+
+<script type="text/javascript">
+var Info = {
+    serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+    j2sPath: "https://vsb.fbb.msu.ru/share/jmol/jsmol/j2s/",
+    use: "HTML5",
+    width: 800,
+    height: 800,
+    color: "#171717",
+    script: "load =3x32"
+    };
+
+$(document).ready(function(){
+  $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+
+  $("#jmolStart").html(Jmol.jmolButton(JSMol, 'script "https://kodomo.fbb.msu.ru/~semperes/term2/script1.spt" ', 'start script'));
+  $("#jmolResume").html(Jmol.jmolButton(JSMol, 'resume', 'resume'));
+  });
+  
+</script>
+</head>
+<body>
+<h1> JMol </h1>
+    <ul>
+            <li> <a href="index.html"> Main page </a> </li>
+            <li> <a href="about_me.html"> About me </a> </li>
+            <li> <a href="term1.html"> First semester </a> </li>
+            <li> <a href="index.html"> Second semester </a> </li>
+            <li> <a href="gallery.html"> Gallery </a> </li>
+            <li> <A href="http://fbb.msu.ru">FBB </A> </li>
+    </ul>
+    
+<h1> Визуализация молекулы цитохрома b5 <h1>
+<p> PDB ID: 3x32 </p>
+<br/>
+<h2> <h2>
+<div id='jmol'></div>
+<div id='jmolStart'></div>
+<div id='jmolResume'></div>
+<p class="prac_intro">
+<a class="file_link" href="static/script1.spt" download="script1.spt">Download script</a> </p>
+<br/>
+<hr>
+<p><ins>Параметры водородных связей между остовными атомами во вторичной структурe</ins> </p>
+<table  class="task_table">
+<tr>
+<td>#</td>
+<td>Имена атомов </td>
+<td>Длина связи (Å) </td>
+<td>Угол N-H-O (°)</td>
+</tr>
+<tr><th colspan="4" style="text-align: center;"> Альфа-спирали </th></tr>
+<tr>
+<td>1</td>
+<td>N(63PHE)- O(59ALA)</td>
+<td>2.97</td>
+<td>165.3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>N(18GLN)- O(14LEU)</td>
+<td>2.92</td>
+<td>158.8</td>
+</tr>
+<tr> 
+<td>3</td>
+<td>N(17ILE)- O(13THR) </td>
+<td>2.89</td>
+<td>170.4</td>
+</tr>
+
+
+
+<tr><th colspan="4" style="text-align: center;"> Бета-тяжи </th></tr>
+<tr>
+<td>1</td>
+<td>N(30LEU)- O(33LYS)</td>
+<td>2.96</td>
+<td>152.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>N(35TYR)- O(28LEU)</td>
+<td>2.85</td>
+<td>169.9</td>
+</tr>
+<tr>
+<td>3</td>
+<td>N(27TRP)- O(36ASP) </td>
+<td>3.57</td>
+<td>132.6</td>
+</tr>
+</table> 
+<p>
+<ins>В альфа-спирали</ins><br/> 
+Средняя длина водородной связи: 2.93Å<br/>  
+Средний угол водородной связи: 164.8 <br/><br/>
+<ins>В бета-тяжах (на основе полученных данных)</ins><br/>
+Средняя длина водородной связи: 3.13Å<br/>
+Средний угол водородной связи: 151.67<br/>
+<br/><br/>
+<ins>Ожидаемые данные</ins><br/>
+Длина водородной связи: 2.5Å - 3.5Å<br/>
+Угол водородной связи: 180 ± 45<br/>
+<br/>
+Полученные данные соответствуют ожидаемым
+</p>
+<footer>
+&#169;Ekaterina Astanina 2020
+</footer>
+</body>
+</html>
+

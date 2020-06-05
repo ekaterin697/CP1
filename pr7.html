@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> Практикум 7 </title>
+    <link href="static/semperes.css" rel="stylesheet">
+    <link href="static/prweb.css" rel="stylesheet">
+  </head>
+ <body>
+    <h1> Нуклеотидные банки данных </h1>
+
+    <ul>
+            <li> <a href="index.html"> Main page </a> </li>
+            <li> <a href="about_me.html"> About me </a> </li>
+            <li> <a href="term1.html"> First semester </a> </li>
+            <li> <a href="term2.html"> Second semester </a> </li>
+            <li> <a href="gallery.html"> Gallery </a> </li>
+            <li> <A href="http://fbb.msu.ru">FBB </A> </li>
+    </ul>
+        <h2> Сборка генома аргентинского чёрно-белого тегу </h2>
+     <p>  Salvator merianae (аргентинский чёрно-белый тегу) – разновиднось ящериц, крупнейший 
+       из вида тегу. Всеядный, обитает в тропических дождевых лесах, саваннах и 
+       полупустынях восточной и центральной части Южной Америки. Тегу обладают высоким 
+       интеллектом, а также впадают в спячку осенью при падении температуры.</p>
+<figure>        
+	<img src="static/img/pr7p1.jpeg" width=600 alt="Oops">
+	<figcaption> Аргентинский чёрно-белый тегу. <a href="https://rcannon992.com/2016/03/05/tame-me-a-tegu/"> Источник. </a> </figcaption>
+</figure>
+<table>
+    <tr>
+        <td>Количество сборок</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Название лучше сборки</td>
+        <td>HLtupMer6</td>
+    </tr>
+    <tr>
+        <td>AC сборки</td>
+        <td>GCA_003586115.2</td>
+    </tr>
+    <tr>
+        <td>Уровень сборки</td>
+        <td>Scaffold</td>
+    </tr>
+    <tr>
+        <td>Общая длина последовательности</td>
+        <td>2,068,170,046</td>
+    </tr>
+    <tr>
+        <td>Число контигов</td>
+        <td>18,331</td>
+    </tr>
+    <tr>
+        <td>Contig N50</td>
+        <td>500,019</td>
+    </tr>
+    <tr>
+        <td>Contig L50</td>
+        <td>1,096</td>
+    </tr>
+    <tr>
+        <td>Число скэффолдов</td>
+        <td>4,512</td>
+    </tr>
+    <tr>
+        <td>Scaffold N50</td>
+        <td>55,382,274</td>
+    </tr>
+    <tr>
+        <td>Scaffold L50</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Число аннотированных белков</td>
+        <td>0</td>
+    </tr>
+</table>
+		<p> <a href="https://www.ncbi.nlm.nih.gov/pubmed/30481296"> Описание проекта </a> </p>
+		<p>Если мы переходим по WGS, то натыкаемся на контиги, которые скаффолды. 
+		<a href="static/pr7f1.fasta.txt"> Вот, например, пятнадцатый. </a>  </p>
+       
+       
+		<h2> Геном вируса </h2>
+		<p> Был выполнен поиск в NCBI Nucleotide: Inoviridae[Organism] AND 5000:6000[Sequence Length] AND complete </p>
+		<p> Всего находок 45: 39 из GenBank и 6 из RefSeq.</p>
+<table>
+    <tr>
+        <td>AC записи</td>
+        <td>MH649151</td>
+    </tr>
+    <tr>
+        <td>Латинское название и TaxID</td>
+        <td>Inoviridae sp. isolate ctcb147; 2219103</td>
+    </tr>
+    <tr>
+        <td>Тип генома</td>
+        <td>Кольцевая днк</td>
+    </tr>
+    <tr>
+        <td>Хозяин</td>
+        <td>Бактерия</td>
+    </tr>
+</table>
+<p> Для получения <a href="static/pr7f2.txt"> файла </a> с участками генома, 
+предположительно кодирующими белки нужно нажать 
+Send to:, затем выбрать Coding Sequences и FASTA Nucleotide. </p>
+
+		<h2> Ключи из таблицы особенностей </h2>
+	<table>
+    <tr>
+        <td>gene</td>
+        <td>Участок, который был определён как конкретный ген</td>
+	<td>complement(7651..7723)<br/>/gene=“trnH”</td>
+    </tr>
+    <tr>
+        <td>centromere</td>
+        <td>Область, которая была определена как центромера</td>
+	<td>114385..114394<br/>/note="CEN3_CDEI of CEN3"</td>
+    </tr>
+    <tr>
+        <td>intron</td>
+        <td>Сегмент днк, который транскрибируется, но удаляется из транскрипта, соединяя последовательности (экзоны) по обе стороны от него</td>
+	<td>568..788<br/>/gene="ubc42"<br/> /number=1
+    </tr>
+    <tr>
+        <td>tRNA</td>
+        <td>Участок, кодирующий тРНК</td>
+	<td>4954..5021<br/>/product=“tRNA-Trp”</td>
+    </tr>
+    <tr>
+        <td>sig_peptid</td>
+	<td>Участок, кодирующий сигнальный пептид</td>
+	<td>1..54<br/>/gene="TCR1A"</td>
+    </tr>
+    <tr>
+        <td>V_region</td>
+	<td>Варьирующаяся область легких и тяжелых цепей иммуноглобулина, а также альфа-, бета- и гамма-цепей рецептора Т-клеток</td>
+	<td>1..277<br/>/gene="VFM1"<br/>/product="immunoglobulin heavy chain variable region"</td>
+    </tr>
+    <tr>
+        <td>regulatory</td>
+        <td>Любой регион, участвующий в регуляции транскрипции, трансляции, репликации 
+        или формировании структуры хроматина</td>
+	<td>1..9<br/>/gene="ubc42"<br/>/regulatory_class="promoter"<td>
+    </tr>
+</table>
+		
+<footer>
+&#169; Ekaterina Astanina 2020
+</footer>
+</body>
+</html>
