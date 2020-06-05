@@ -1,0 +1,293 @@
+set echo top left 
+font echo 18 
+color echo black 
+background echo white
+
+ 
+restrict protein 
+cpk 40
+wireframe 15
+select iod, cl
+cpk 200
+label %a
+echo "Ligands"
+zoom 75
+pause
+
+
+restrict none
+restrict Pro1411:B or SER1412:B 
+cpk 80 
+wireframe 30
+select Pro1411:B.C or SER1412:B.N 
+label %a
+center selected 
+zoom 400 
+cpk 160 
+wireframe 70 
+echo Peptide bond (Pro1411:B.C and SER1412:B.N ) 
+pause 
+
+
+restrict none
+restrict [CYS]218:A or [CYS]198:A 
+center selected 
+zoom 350 
+cpk 30 
+wireframe 30 
+select Cys218:A.SG or Cys198:A.SG%A 
+label %a
+cpk 
+cpk 100 
+wireframe 50 
+echo Disulfide bridge([CYS]218:A-[CYS]198:A) 
+pause 
+
+
+restrict none
+restrict [ARG]97:A or [ASP]103:A 
+cpk 50 
+wireframe 20
+color cpk 
+center selected 
+zoom 350
+select [ARG]97:A.NH2,[ARG]97:A.NH1,[ASP]103:A.OD2,[ASP]103:A.OD1 
+label %a 
+rotate x 45
+cpk 100 
+measure ({705}) ({749}) 
+measure ({704}) ({750}) 
+echo "Ion bridges ([ARG]97:A and [ASP]103:A)" 
+pause 
+
+restrict none
+restrict [GLU]28:A or [LYS]25:A 
+cpk 50 
+wireframe 20
+color cpk 
+center selected 
+zoom 350
+select [GLU]28:A.OE1,[LYS]25:A.NZ 
+label %a
+cpk 100
+measure ({159}) ({181}) 
+echo "Ion bridges ([GLU]28:A and [LYS]25:A )" 
+pause 
+
+
+restrict none
+restrict [ARG]167:A or [GLU]159:A
+cpk 50 
+wireframe 20
+color cpk 
+center selected 
+zoom 350
+select [ARG]167:A.NH1,[GLU]159:A.OE1 
+label %a
+cpk 100
+measure ({1271}) ({1196}) 
+echo "Ion bridges([ARG]167:A and [GLU]159:A)"
+
+
+
+restrict none
+zoom 150
+define MyResidue [Tyr]130
+restrict myresidue
+spacefill
+color green
+center selected
+echo "MyResidue's Van der Waals radiuses"
+pause
+
+restrict none
+spacefill off
+wireframe off
+restrict [Tyr]130:A,[LEU]52:A,[VAL]126:A,[ASP]51:A,[GLU]128:A,[PHE]1417:B,[THR]107:A,[ILE]73:A,[ILE]129:A,[GLY]127:A,[ILE]135:A,[ASP]103:A,[GLN]50:A,[ILE]104:A,[ASN]53:A,[TRP]133:A,[PRO]125:A,[THR]48:A,[LEU]56:A,[GLY]1418:B,[ARG]132:A,[GLY]106:A,[LEU]136:A,[LYS]131:A,[ALA]105:A,[ILE]134:A,[PHE]40:A,[GLY]101:A,[PRO]49:A
+center selected
+cpk 35
+color cpk
+select [Tyr]130:A
+spacefill
+color green 
+echo "MyResidue and other residues"
+pause
+
+restrict none
+cpk off
+restrict within(1.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(1.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(1.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(1.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(1.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 1"
+pause
+
+
+restrict none
+cpk off
+restrict within(2.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(2.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(2.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(2.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(2.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 2"
+pause
+
+restrict none
+cpk off
+restrict within(3.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(3.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(3.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(3.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(3.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 3"
+pause
+
+restrict none
+cpk off
+restrict within(4.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(4.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(4.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(4.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(4.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 4"
+pause
+
+
+restrict none
+cpk off
+restrict within(5.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(5.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(5.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(5.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(5.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 5"
+pause
+
+restrict none
+cpk off
+restrict within(6.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(6.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(6.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(6.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(6.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 6"
+pause
+
+
+restrict none
+cpk off
+restrict within(7.0, [Tyr]130)
+center selected
+select [Tyr]130:A
+spacefill
+color green 
+select within(7.0, [Tyr]130) and not [Tyr]130 and carbon
+spacefill 1.85
+select within(7.0, [Tyr]130) and not [Tyr]130 and nitrogen
+spacefill 1.54
+select within(7.0, [Tyr]130) and not [Tyr]130 and oxygen
+spacefill 1.4 
+select within(7.0, [Tyr]130) and not [Tyr]130 and sulfur
+spacefill 1.85
+echo "Van der vaals of MyResidue environment; distanse less than 7"
+pause
+
+
+restrict all
+hbonds off
+restrict none
+restrict backbone and 11-12:A, 2-3:A
+center selected
+color cpk
+wireframe 20
+calculate hbonds
+select [VAL]11:A.O,[VAL]3:A.N,[VAL]11:A.N,[VAL]3:A.O
+cpk 100
+label %a
+measure ({18}) ({39})
+measure ({15}) ({42})
+zoom 350
+echo "Beta-sheets,hbonds,([VAL]11-[VAL]3)"
+pause
+
+restrict all
+hbonds off
+restrict none
+restrict backbone and 210-218:A
+center selected
+wireframe 20
+calculate hbonds
+select [GLU]212:A.O,[THR]216:A.N,[LEU]211:A.O,[MET]215:A.N,[ALA]217:A.N,[MET]214:A.O,[GLU]213:A.O,[CYS]218:A.N,[MET]214:A.N,[THR]210:A.O   
+cpk 100
+label %a
+ measure ({1639}) ({1664})
+measure ({1630}) ({1659})
+measure ({1621}) ({1652})
+measure ({1613}) ({1644})
+measure ({1606}) ({1636})
+echo "Alpha-helix, hbonds([Glu]212-[Thr]216; [Leu]211-[Met]215; [Met]214-[Cys]218; [Thr]210-[Met]214; [Ala]217-[Glu213])"
+pause
+
+restrict all
+hbonds off
+restrict none
+restrict backbone and 149-153
+center selected
+wireframe 20
+select [SER]149:A.O,[ILE]150:A.O,[ILE]153:A.N,[ASP]152:A.N #113
+cpk 100
+label %a
+measure ({1114}) ({1133})
+ measure ({1120}) ({1141})
+calculate hbonds
+echo "3-10 helix, hbonds([Ser]149-[Asp]152;[Ile]150-[Ile]153)"

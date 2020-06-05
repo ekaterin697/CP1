@@ -1,0 +1,54 @@
+body {background-image: url("img/marble.jpg");
+      background-size:cover}
+ul{list-style: none;
+border-bottom: 1px #888899 solid;
+padding-bottom: 10px}
+ul li{display: inline;
+margin-right: 1px}
+ul li a {
+font-size: 23px;
+color: #4a1848;
+text-decoration: none;
+background: #ffecfc8c;
+border: 1px #bbbbcc solid;
+border-bottom: none;
+padding: 10px 24px}
+ul li a:hover {
+padding: 14px 14px 10px 14px}
+ul li a.selected {
+color: #555566;
+background: #ffffff;
+border: 1px #888899 solid;
+border-bottom: 1px #ffffff solid;
+padding: 14px 14px 10px 14px}
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;}
+.photo {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;}
+.photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #eee;
+    box-sizing: border-box;}
+.photo a:hover {
+    opacity: 0.5;}
+.photo a {
+    display: block;
+    position: relative;}
+.photo figcaption {
+    font-family: 'Open Sans', sans-serif;
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;}
+.photo figcaption {
+    font-family: 'Open Sans', sans-serif;
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;}

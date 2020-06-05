@@ -1,0 +1,4 @@
+load =1i3j
+define set1 *.O3' or *.O4' or *.O5' and dna
+define set2 *.OP1 or *.OP2 and dna
+define set3 *.N? and dna  

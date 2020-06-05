@@ -1,0 +1,63 @@
+set echo bottom left
+font echo 24 Arial
+color echo White
+
+wireframe 30
+cpk 80
+restrict none
+select all
+cartoon on
+color violet
+echo "Coloured by chains"
+pause
+
+select all
+color structure
+echo "Coloured by secondary structure"
+pause
+
+restrict none
+select all
+cartoon on
+color cpk
+select all
+color structure
+select ligands
+colour cpk
+wireframe 0.2
+cpk 100
+echo "Ligands"
+pause
+
+cartoon off
+restrict none
+restrict protein
+spacefill
+color cpk
+echo "Van der Waals radiuses"
+pause
+
+spacefill off
+restrict none
+restrict (13-19)
+backbone 1
+select (13-19)
+center selected
+calculate hbonds
+hbonds 10
+zoom 300
+echo "Alpha-helix backbone with hydrogen bonds"
+pause
+
+calculate hbonds
+hbonds off
+restrict none
+restrict (25-30), (33-36)
+backbone 1
+select (25-30), (33-36)
+centre selected
+calculate hbonds
+hbonds 20
+zoom 300
+echo "Beta-helix backbone with hydrogen bonds"
+pause

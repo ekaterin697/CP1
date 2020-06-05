@@ -1,0 +1,26 @@
+h1 {color:#2F123B;font-family:"Times New Roman";font-size:40px;margin:10px;}
+body {background-image: url("img/marble.jpg");
+      background-size:cover}
+h3 {font-size:30px}
+h4 {font-size:28px}
+ul{list-style: none;
+border-bottom: 1px #888899 solid;
+padding-bottom: 10px}
+ul li{display: inline;
+margin-right: 1px}
+ul li a {
+font-size:28px;
+color: #4a1848;
+text-decoration: none;
+background: #f8e0f7;
+border: 1px #bbbbcc solid;
+border-bottom: none;
+padding: 10px 24px}
+ul li a:hover {
+padding: 14px 14px 10px 14px}
+ul li a.selected {
+color: #555566;
+background: #ffffff;
+border: 1px #888899 solid;
+border-bottom: 1px #ffffff solid;
+padding: 14px 14px 10px 14px
